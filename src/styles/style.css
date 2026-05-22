@@ -34,18 +34,21 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
-    height: 875px;
+    padding: 100px 20px
 }
 .main-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
-    height: 600px;
-
-    gap: 50px;
+    gap: 40px;
 }
 .main-img > img {
     width: 650px;
@@ -56,9 +59,6 @@ h1 {
     font-weight: 700;
 
     color: white;
-}
-.main-button {
-    padding: 100px 790px;
 }
 button {
     background-color: red;
@@ -72,78 +72,73 @@ button {
 }
 .servico {
     background-color: black;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 15px;
+    padding: 20px 40px;
 }
 .servico-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-    gap: 15px;
-
+    gap: 10px;
     color: white;
 }
 .servico-text > p {
     font-size: 24px;
 }
-.servico-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .servico-nav > nav {
     display: flex;
     gap: 40px;
-
-    padding: 15px;
 }
 .servico-fundo {
     background-image: url(../assets/images/fundo-servico.png);
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-position: center;
     width: 100%;
-    height: 875px;
 
-    display: flex;
-    justify-content: space-around;
-
-    padding: 100px;
-}
-.card-text-1 {
-    background-color: black;
-    border-radius: 25px;
-
-    padding: 10px 20px;
-}
-.card-text-2 {
-    background-color: black;
-    border-radius: 25px;
-
-    padding: 10px 20px;
-}
-h4 {
-    font-size: 38px;
-    font-weight: 700;
-    
-    color: white;
+    padding: 80px 20px; 
 
     display: flex;
     justify-content: center;
-
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    width: 100%;
+}
+.card > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+.card-text {
+    background-color: black;
+    border-radius: 0 0 25px 25px;
     padding: 30px;
+}
+h4 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+ul {
+    list-style-position: inside;
+    padding-left: 10px;
 }
 li {
     font-size: 18px;
     font-weight: 400;
-
     color: white;
+    margin-bottom: 12px;
 }
 .galeria {
     background-color: black;
@@ -187,20 +182,80 @@ li {
     align-items: center;
 
     width: 100%;
-    height: 675px;
+    padding: 60px 20px;
 
     gap: 100px;
 }
 .galeria-car {
     background-color: black;
 
-    padding: 75px 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    gap: 30px;
+}
+.galeria-car img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
 }
 .car-1-2 {
     display: flex;
-    gap: 250px;
+    gap: 30px;
 }
 .car-3-4 {
     display: flex;
-    gap: 250px;
+    gap: 30px;
+}
+@media (min-width: 431px) and (max-width: 768px) {
+    header, .servico, .galeria {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 36px; 
+        padding: 0 30px;
+        max-width: 500px;
+    }
+    h3 {
+        font-size: 36px;
+    }
+    button {
+        font-size: 26px;
+    }
+    .car-1-2, .car-3-4 {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media (max-width: 430px) {
+    header, .servico, .galeria {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .main-img > img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+    h1 {
+        font-size: 26px;
+        padding: 0px 15px;
+        max-width: 320px;
+    }
+    h3 {
+        font-size: 36px;
+    }
+    button {
+        font-size: 22px;
+    }
+    .car-1-2, .car-3-4 {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

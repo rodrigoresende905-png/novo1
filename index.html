@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <img src="./src/assets/images/logo.png" alt="logo">
         <h2>FabioFull</h2>
         <div class="header-nav">
             <nav>
-                <a href="">Home</a>
-                <a href="">Serviços</a>
-                <a href="">Galeria</a>
-                <a href="">Contato</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
@@ -24,30 +23,28 @@
         <div class="main-img">
             <img src="./src/assets/images/logo-main.png" alt="logo main">
             <h1>Excelência em reparo e renovação automotiva</h1>
-        </div>
-        <div class="main-button">
             <button>Ver transformações!</button>
         </div>
     </main>
-    <div class="servico">
-        <img src="./src/assets/images/logo.png" alt="logo">
-        <div class="servico-text">
-            <h3>Nossos Serviços </h3>
-            <p>Tudo feito com qualidade e calma</p>
+    <section class="secao-servicos" id="servicos">
+        <div class="servico">
+            <img src="./src/assets/images/logo.png" alt="logo">
+            <div class="servico-text">
+                <h3>Nossos Serviços</h3>
+                <p>Tudo feito com qualidade e calma</p>
+            </div>
+            <div class="servico-nav">
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
         </div>
-        <div class="servico-nav">
-            <nav>
-                <a href="">Home</a>
-                <a href="">Galeria</a>
-                <a href="">Contato</a>
-            </nav>
-        </div>
-    </div>
-    <div class="servico-fundo">
-        <div class="servico-cards-1">
-            <div class="card-1">
+        <div class="servico-fundo">
+            <div class="card">
                 <img src="./src/assets/images/funilaria.png" alt="funilaria image">
-                <div class="card-text-1">
+                <div class="card-text">
                     <h4>Funilaria</h4>
                     <ul>
                         <li>Soldas</li>
@@ -58,11 +55,9 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="servico-cards-2">
-            <div class="card-2">
+            <div class="card">
                 <img src="./src/assets/images/pintura.png" alt="pintura image">
-                <div class="card-text-2">
+                <div class="card-text">
                     <h4>Pintura</h4>
                     <ul>
                         <li>Retoques</li>
@@ -75,8 +70,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="galeria">
+    </section>
+    <div class="galeria" id="galeria">
         <img src="./src/assets/images/logo.png" alt="logo">
         <div class="galeria-text">
             <h3>Galeria de Projetos </h3>
@@ -84,9 +79,9 @@
         </div>
         <div class="galeria-nav">
             <nav>
-                <a href="">Home</a>
-                <a href="">Serviços</a>
-                <a href="">Contato</a>
+                <a href="#home">Home</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </div>
