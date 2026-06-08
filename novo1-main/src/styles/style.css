@@ -1,267 +1,6 @@
-header {
-    background-color: black;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header > img {
-    padding: 15px;
-}
-h2 {
-    font-size: 48px;
-    font-weight: 700;
-
-    color: white;
-}
-.header-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-nav > nav {
-    display: flex;
-
-    padding: 15px;
-
-    gap: 16px;
-}
-a {
-    color: white;
-}
-main {
-    background-image: url(../assets/images/fundo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    padding: 100px 20px
-}
-.main-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    gap: 40px;
-}
-.main-img > img {
-    width: 650px;
-    height: 400px;
-}
-h1 {
-    font-size: 48px;
-    font-weight: 700;
-
-    color: white;
-}
-button {
-    background-color: red;
-    color: white;
-    border: 1px solid black;
-    border-radius: 15px;
-
-    padding: 8px 20px;
-
-    font-size: 30px;
-}
-.servico {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-.servico-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: white;
-}
-.servico-text > p {
-    font-size: 24px;
-}
-.servico-nav > nav {
-    display: flex;
-    gap: 40px;
-}
-.servico-fundo {
-    background-image: url(../assets/images/fundo-servico.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-
-    padding: 80px 20px; 
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 60px;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    max-width: 380px;
-    width: 100%;
-}
-.card > img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px 25px 0 0;
-}
-.card-text {
-    background-color: black;
-    border-radius: 0 0 25px 25px;
-    padding: 30px;
-}
-h4 {
-    font-size: 36px;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    padding-bottom: 20px;
-}
-ul {
-    list-style-position: inside;
-    padding-left: 10px;
-}
-li {
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 12px;
-}
-.galeria {
-    background-color: black;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 15px;
-}
-.galeria-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 15px;
-
-    color: white;
-}
-.galeria-text > p {
-    font-size: 24px;
-}
-.galeria-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.galeria-nav > nav {
-    display: flex;
-    gap: 40px;
-
-    padding: 15px;
-}
-.galeria-fundo {
-    background-color: rgb(61, 61, 61);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    padding: 60px 20px;
-
-    gap: 100px;
-}
-.galeria-car {
-    background-color: black;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 40px;
-    gap: 30px;
-}
-.galeria-car img {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
-}
-.car-1-2 {
-    display: flex;
-    gap: 30px;
-}
-.car-3-4 {
-    display: flex;
-    gap: 30px;
-}
-@media (min-width: 431px) and (max-width: 768px) {
-    header, .servico, .galeria {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-    h1 {
-        font-size: 36px; 
-        padding: 0 30px;
-        max-width: 500px;
-    }
-    h3 {
-        font-size: 36px;
-    }
-    button {
-        font-size: 26px;
-    }
-    .car-1-2, .car-3-4 {
-        flex-direction: column;
-        gap: 40px;
-    }
-}
-@media (max-width: 430px) {
-    header, .servico, .galeria {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    .main-img > img {
-        width: 100%;
-        max-width: 280px;
-        height: auto;
-    }
-    h1 {
-        font-size: 26px;
-        padding: 0px 15px;
-        max-width: 320px;
-    }
-    h3 {
-        font-size: 36px;
-    }
-    button {
-        font-size: 22px;
-    }
-    .car-1-2, .car-3-4 {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-/* ========= GALERIA ========= */
-
+/* ==========================================================================
+   1. RESET GLOBAL E CONFIGURAÇÕES BASE (Sempre no topo do arquivo)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -274,6 +13,252 @@ body {
     color: #fff;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   2. ESTRUTURA PRINCIPAL (HEADER, MAIN, SERVIÇOS)
+   ========================================================================== */
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > img {
+    padding: 15px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav > nav {
+    display: flex;
+    padding: 15px;
+    gap: 16px;
+}
+
+main {
+    background-image: url(../assets/images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Alterado para min-height para evitar quebras */
+    padding: 100px 20px;
+}
+
+.main-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.main-img > img {
+    width: 100%;
+    max-width: 650px; /* Melhorado para não quebrar telas médias */
+    height: auto;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Corrigido conflito de cores do botão */
+.botao-link {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #ff0000; /* Defina a cor final aqui (ex: #ff0000 ou blue) */
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 8px 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.servico {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.servico-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.servico-text > p {
+    font-size: 24px;
+}
+
+.servico-nav > nav {
+    display: flex;
+    gap: 40px;
+}
+
+.servico-fundo {
+    background-image: url(../assets/images/fundo-servico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh; /* Alterado para min-height */
+    padding: 80px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    width: 100%;
+}
+
+.card > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+.card-text {
+    background-color: black;
+    border-radius: 0 0 25px 25px;
+    padding: 30px;
+}
+
+h4 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+li {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================================================
+   3. SEÇÃO GALERIA ANTIGA
+   ========================================================================== */
+.galeria {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.galeria-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.galeria-text > p {
+    font-size: 24px;
+}
+
+.galeria-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria-nav > nav {
+    display: flex;
+    gap: 40px;
+    padding: 15px;
+}
+
+.galeria-fundo {
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Alterado para min-height base */
+    padding: 60px 20px;
+    gap: 100px;
+}
+
+.galeria-car {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.galeria-car img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+}
+
+.car-1-2, .car-3-4 {
+    display: flex;
+    gap: 30px;
+}
+
+
+/* ==========================================================================
+   4. NOVA SEÇÃO DE GALERIA & HERO (Misturada no seu código)
+   ========================================================================== */
 .gallery-header {
     width: 100%;
     background: #111;
@@ -332,8 +317,6 @@ body {
     object-fit: cover;
 }
 
-/* ========= SEGUNDA PARTE ========= */
-
 .hero-section {
     width: 100%;
     min-height: 100vh;
@@ -356,7 +339,6 @@ body {
 
 .hero-header nav a {
     color: #fff;
-    text-decoration: none;
     font-size: 13px;
 }
 
@@ -385,20 +367,83 @@ body {
     font-size: 22px;
 }
 
-/* RESPONSIVO */
 
+/* ==========================================================================
+   5. REGRAS DE RESPONSIVIDADE (@MEDIA QUERIES - Sempre por último)
+   ========================================================================== */
+
+/* Telas de Tablets até Notebooks Pequenos */
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: 1fr;
     }
-
     .hero h1 {
         font-size: 42px;
     }
-
     .phones {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+    }
+}
+
+/* Telas de Celulares Grandes e Tablets deitados */
+@media (max-width: 768px) {
+    header, .servico, .galeria {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    /* Sobrescreve as alturas fixas com segurança */
+    main, .servico-fundo, .galeria-fundo {
+        height: auto !important; 
+        min-height: 100vh;
+    }
+    h1 {
+        font-size: 36px; 
+        padding: 0 30px;
+        max-width: 500px;
+    }
+    h3 {
+        font-size: 36px;
+    }
+    button {
+        font-size: 26px;
+    }
+    .car-1-2, .car-3-4 {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+    header, .servico, .galeria {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    main, .servico-fundo, .galeria-fundo {
+        height: auto !important;
+        min-height: 100vh;
+    }
+    .main-img > img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+    h1 {
+        font-size: 26px;
+        padding: 0px 15px;
+        max-width: 320px;
+    }
+    h3 {
+        font-size: 36px;
+    }
+    button {
+        font-size: 22px;
+    }
+    .car-1-2, .car-3-4 {
+        flex-direction: column;
         gap: 20px;
     }
 }
