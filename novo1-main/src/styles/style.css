@@ -1,56 +1,42 @@
-/* ==========================================================================
-   1. RESET GLOBAL E CONFIGURAÇÕES BASE (Sempre no topo do arquivo)
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     background: #111;
     color: #fff;
 }
-
 a {
     color: white;
     text-decoration: none;
 }
-
-
-/* ==========================================================================
-   2. ESTRUTURA PRINCIPAL (HEADER, MAIN, SERVIÇOS)
-   ========================================================================== */
+a:hover {
+    color: yellow;
+}
 header {
     background-color: black;
     display: flex;
+    position: fixed;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
 }
-
 header > img {
     padding: 15px;
 }
-
 h2 {
     font-size: 48px;
     font-weight: 700;
     color: white;
 }
-
 .header-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .header-nav > nav {
     display: flex;
     padding: 15px;
     gap: 16px;
 }
-
 main {
     background-image: url(../assets/images/fundo.png);
     background-repeat: no-repeat;
@@ -59,11 +45,12 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh; /* Alterado para min-height para evitar quebras */
+    min-height: 100vh;
     padding: 100px 20px;
 }
-
 .main-img {
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,100 +58,62 @@ main {
     text-align: center;
     gap: 40px;
 }
-
 .main-img > img {
     width: 100%;
-    max-width: 650px; /* Melhorado para não quebrar telas médias */
+    margin-top: 80px;
+    max-width: 650px;
     height: auto;
 }
-
 h1 {
     font-size: 48px;
     font-weight: 700;
-    color: white;
+    color: rgb(255, 255, 255);
 }
-
-/* Corrigido conflito de cores do botão */
 .botao-link {
     display: flex;
     padding: 10px 20px;
-    background-color: #ff0000; /* Defina a cor final aqui (ex: #ff0000 ou blue) */
+    background-color: #ff0000;
     color: white;
     border-radius: 15px;
     text-align: center;
     transition: 0.3s ease;
 }
-
-button {
-    background-color: red;
-    color: white;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding: 8px 20px;
-    font-size: 30px;
-    cursor: pointer;
+.botao-link:hover {
+    background-color: blue;
 }
-
-.servico {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-
-.servico-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: white;
-}
-
-.servico-text > p {
-    font-size: 24px;
-}
-
-.servico-nav > nav {
-    display: flex;
-    gap: 40px;
-}
-
 .servico-fundo {
     background-image: url(../assets/images/fundo-servico.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 100vh; /* Alterado para min-height */
+    min-height: 100vh;
     padding: 80px 20px; 
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 60px;
 }
-
 .card {
     display: flex;
     flex-direction: column;
     max-width: 380px;
     width: 100%;
+    height: 100%;
 }
-
 .card > img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 25px 25px 0 0;
 }
-
 .card-text {
     background-color: black;
     border-radius: 0 0 25px 25px;
     padding: 30px;
+    height: 100%;
 }
-
 h4 {
     font-size: 36px;
     font-weight: 700;
@@ -172,23 +121,16 @@ h4 {
     text-align: center;
     padding-bottom: 20px;
 }
-
 ul {
     list-style-position: inside;
     padding-left: 10px;
 }
-
 li {
     font-size: 18px;
     font-weight: 400;
     color: white;
     margin-bottom: 12px;
 }
-
-
-/* ==========================================================================
-   3. SEÇÃO GALERIA ANTIGA
-   ========================================================================== */
 .galeria {
     background-color: black;
     display: flex;
@@ -196,7 +138,6 @@ li {
     align-items: center;
     padding: 15px;
 }
-
 .galeria-text {
     display: flex;
     flex-direction: column;
@@ -205,23 +146,19 @@ li {
     gap: 15px;
     color: white;
 }
-
 .galeria-text > p {
     font-size: 24px;
 }
-
 .galeria-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .galeria-nav > nav {
     display: flex;
     gap: 40px;
     padding: 15px;
 }
-
 .galeria-fundo {
     background-color: rgb(61, 61, 61);
     display: flex;
@@ -229,11 +166,10 @@ li {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh; /* Alterado para min-height base */
+    min-height: 100vh;
     padding: 60px 20px;
     gap: 100px;
 }
-
 .galeria-car {
     background-color: black;
     display: flex;
@@ -243,22 +179,15 @@ li {
     padding: 40px;
     gap: 30px;
 }
-
 .galeria-car img {
     max-width: 450px;
     width: 100%;
     height: auto;
 }
-
 .car-1-2, .car-3-4 {
     display: flex;
     gap: 30px;
 }
-
-
-/* ==========================================================================
-   4. NOVA SEÇÃO DE GALERIA & HERO (Misturada no seu código)
-   ========================================================================== */
 .gallery-header {
     width: 100%;
     background: #111;
@@ -267,112 +196,107 @@ li {
     align-items: center;
     padding: 18px 42px;
 }
-
 .logo img {
     width: 140px;
     filter: brightness(0) invert(1);
 }
-
 .gallery-title {
     flex: 1;
     text-align: center;
 }
-
 .gallery-title h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 48px;
 }
-
 .gallery-title p {
     font-size: 13px;
     color: #ccc;
 }
-
+.gallery {
+    background-image: url(../assets/images/fundo-de-garagem.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 20px;
+}
 .gallery-box {
     background: #181818;
     padding: 28px;
     border-radius: 4px;
 }
-
 .gallery-box h2 {
     margin-bottom: 22px;
 }
-
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
 }
-
 .grid-item {
     height: 250px;
     overflow: hidden;
     background: #222;
     border-radius: 4px;
 }
-
+.grid-item:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
 .grid-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .hero-section {
-    width: 100%;
-    min-height: 100vh;
     background: #050505;
     position: relative;
     padding-top: 40px;
 }
-
 .hero-header {
     display: flex;
     justify-content: space-between;
     padding: 28px 42px;
     align-items: center;
 }
-
 .hero-header nav {
     display: flex;
     gap: 48px;
 }
-
 .hero-header nav a {
     color: #fff;
     font-size: 13px;
 }
-
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 65vh;
     text-align: center;
+  
 }
-
 .hero h1 {
     font-family: 'Abril Fatface', serif;
     font-size: 64px;
     font-weight: 400;
 }
-
 .phones {
     display: flex;
     justify-content: space-around;
     padding-bottom: 80px;
 }
-
 .phones span {
     font-family: 'Abril Fatface', serif;
     font-size: 22px;
 }
-
-
-/* ==========================================================================
-   5. REGRAS DE RESPONSIVIDADE (@MEDIA QUERIES - Sempre por último)
-   ========================================================================== */
-
-/* Telas de Tablets até Notebooks Pequenos */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin: 20px 0;
+}  
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: 1fr;
@@ -386,15 +310,12 @@ li {
         gap: 20px;
     }
 }
-
-/* Telas de Celulares Grandes e Tablets deitados */
 @media (max-width: 768px) {
     header, .servico, .galeria {
         flex-direction: column;
         gap: 30px;
         text-align: center;
     }
-    /* Sobrescreve as alturas fixas com segurança */
     main, .servico-fundo, .galeria-fundo {
         height: auto !important; 
         min-height: 100vh;
@@ -415,7 +336,6 @@ li {
         gap: 40px;
     }
 }
-
 @media (max-width: 430px) {
     header, .servico, .galeria {
         flex-direction: column;
